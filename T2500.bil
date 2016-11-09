@@ -1,0 +1,46 @@
+##   ____           _               _        ____                      _     
+##  / ___|   _  ___| | _____   ___ ( )___   / ___|  ___  __ _ _ __ ___| |__  
+## | |  | | | |/ __| |/ / _ \ / _ \|// __|  \___ \ / _ \/ _` | '__/ __| '_ \ 
+## | |__| |_| | (__|   < (_) | (_) | \__ \   ___) |  __/ (_| | | | (__| | | |
+##  \____\__,_|\___|_|\_\___/ \___/  |___/  |____/ \___|\__,_|_|  \___|_| |_|
+##                                                                           
+## v 1.0 
+## Merino Research Group                                    
+## Theoretical and Computational Chemistry
+## Jose Luis Cabellos, and Gabriel Merino. 
+## Cinvestav 
+
+ 
+## Stoichiometry  
+Ag                    2
+Au                    10
+Pt                    1
+
+ratio_radii_min       0.95
+ratio_radii_max       1.15
+
+## control population 
+
+initial_population    30
+max_energy_allowed    300  
+max_number_inputs     400
+ 
+
+## control computer 
+ 
+ 
+queue           qgpu 
+njobs           8
+nprocshared     20 
+reopt           on
+
+
+---block1---
+ % MEM=48GB 
+ # PBE1PBE  LANL2DZ  OPT=(MAXCYCLES=512) SCF=(XQC,MAXCYCLES=512)
+   
+comment
+   
+0  1
+---block1---
+
